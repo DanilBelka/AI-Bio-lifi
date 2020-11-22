@@ -4,6 +4,8 @@
 #include <ctime>
 #include <cmath>
 #include <QDebug>
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -91,6 +93,4 @@ void MainWindow::render()
         }
         GrassEater[j]->GetInput(MinFAngle,MinFDist,MinEAngle,MinEDist,numF);
     }
-
-    qDebug() << qrand() % 5 << qrand() % 5;
 }
