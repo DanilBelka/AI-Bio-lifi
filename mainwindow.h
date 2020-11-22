@@ -26,6 +26,7 @@ public:
     QVector<Backteria*> GrassEater;
     QVector<Hunterr*> Hunter;
     int n = 10;
+    int numF = n,numB = n,numH = n;
     //Scene
     QGraphicsScene *scene;
     QTimer *timer;

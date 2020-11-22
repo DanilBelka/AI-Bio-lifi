@@ -30,3 +30,28 @@ void Backteria::GetInput(float FAngle,float FDist,float EAngle,float EDist,unsig
     Input[3] = EDist;
     Input[4] = NFood;
 }
+
+void Backteria::SetWeight(double one[5][5], double two[2][5])
+{
+    for(int i = 0;i<5;i++)
+          for(int j = 0;j<5;j++)
+              Weight1[i][j] = one[i][j];
+
+    for(int i =2;i<2;i++)
+        for(int j = 0;j<5;j++)
+              Weight2[i][j] = two[i][j];
+
+}
+
+
+
+void Backteria::CalcStep()
+{
+    for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
+            Hide[i] += Input[j] * Weight1[i][j];
+
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 5; j++)
+            Out[i] += Hide[j] * Weight2[i][j];
+}
