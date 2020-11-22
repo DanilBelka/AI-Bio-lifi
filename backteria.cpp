@@ -1,5 +1,7 @@
 #include "backteria.h"
 #include <QBrush>
+
+
 Backteria::Backteria()
 {
     this->setBrush(QBrush(Qt::blue));
@@ -15,6 +17,7 @@ void Backteria::SetSize(qreal x)
 {
     this->setRect(this->x(),this->y(),x,x);
     size = x;
+
 }
 
 void Backteria::SetRandPos(int minX, int maxX, int minY, int maxY)
@@ -43,7 +46,7 @@ void Backteria::SetWeight(double one[5][5], double two[2][5])
 
     if (qrand() % 2 == 0)
     {
-//        Weight1[qrand() % 5][qrand() % 5] += ;
+        Weight1[qrand() % 5][qrand() % 5] += ;
     }
     else
     {
